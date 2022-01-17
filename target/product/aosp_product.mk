@@ -19,15 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
 
 # Default AOSP sounds
-<<<<<<< HEAD
-ifeq ($(NAVABUILD),)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
-else
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage14.mk)
-endif
-=======
-$(call inherit-product-if-exists, frameworks/base/data/sounds/GoogleAudio.mk)
->>>>>>> b569d29097 (Build Google audio files from android12 [1/2])
+$(call inherit-product-if-exists, frameworks/base/data/sounds/CustomAudio.mk)
 
 # Additional settings used in all AOSP builds
 PRODUCT_PRODUCT_PROPERTIES += \
